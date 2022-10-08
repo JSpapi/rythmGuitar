@@ -39,17 +39,17 @@ const createStoreCard = () => {
   // !STORE ITEMS
   const newBoard = [
     {
-      productImg: "../images/content/guitar1.png",
+      productImg: "./../images/content/guitar1.png",
       productName: "The Essential Les Paul",
       productPrice: "$1,299.00",
     },
     {
-      productImg: "../images/content/guitar2.png",
+      productImg: "./../images/content/guitar2.png",
       productName: "J-45 Standard",
       productPrice: "$1,699.00",
     },
     {
-      productImg: "../images/content/guitar3.png",
+      productImg: "./../images/content/guitar3.png",
       productName: "Hummingbird Standard",
       productPrice: "$2,099.00",
     },
@@ -57,17 +57,17 @@ const createStoreCard = () => {
 
   const topSelling = [
     {
-      productImg: "../images/content/guitar4.png",
+      productImg: "./../images/content/guitar4.png",
       productName: "Active Precision Bass® PH V",
       productPrice: "$4,199.00",
     },
     {
-      productImg: "../images/content/guitar5.png",
+      productImg: "./../images/content/guitar5.png",
       productName: "Redondo Special",
       productPrice: "$2,800.00",
     },
     {
-      productImg: "../images/content/guitar6.png",
+      productImg: "./../images/content/guitar6.png",
       productName: "Professional II Stratocaster®",
       productPrice: "$3,199.00",
     },
@@ -85,22 +85,22 @@ const createStoreCard = () => {
 
 // !CREAT CATEGORY FUCNTION
 
-const creatCategories = () => {
+const creatCategories = () => {./
   const categories = [
     {
-      categoryImg: "../images/content/acustic.png",
+      categoryImg: "./../images/content/acustic.png",
       categoryName: "Acoustic",
     },
     {
-      categoryImg: "../images/content/electronic.png",
+      categoryImg: "./../images/content/electronic.png",
       categoryName: "Electric",
     },
     {
-      categoryImg: "../images/content/basses.png",
+      categoryImg: "./../images/content/basses.png",
       categoryName: "Basses",
     },
     {
-      categoryImg: "../images/content/collections.png",
+      categoryImg: "./../images/content/collections.png",
       categoryName: "Collections",
     },
   ];
@@ -129,15 +129,15 @@ const createRythmItem = ()=> {
 
   const rythmFeatures = [
     {
-      featuresImg: '../images/icons/browsing-icon.svg',
+      featuresImg: './../images/icons/browsing-icon.svg',
       featuresName: 'Smooth Browsing',
     },
     {
-      featuresImg: '../images/icons/delivery-icon.svg',
+      featuresImg: './../images/icons/delivery-icon.svg',
       featuresName: 'EASY Delivery',
     },
     {
-      featuresImg: '../images/icons/wallet-icon.svg',
+      featuresImg: './../images/icons/wallet-icon.svg',
       featuresName: 'SWIFT PAYMENTS',
     },
   ]
