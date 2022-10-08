@@ -85,7 +85,7 @@ const createStoreCard = () => {
 
 // !CREAT CATEGORY FUCNTION
 
-const creatCategories = () => {./
+const creatCategories = () => {
   const categories = [
     {
       categoryImg: "./../images/content/acustic.png",
