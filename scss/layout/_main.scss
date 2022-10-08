@@ -1,0 +1,15 @@
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-padding{
+  padding: 60px 0;
+}
+
+@media screen and (max-width: 992px){
+  .section-padding{
+    padding: 30px 0;
+  }
+}

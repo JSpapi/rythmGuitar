@@ -1,0 +1,211 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.users__review{
+  position: relative;
+}
+
+.users__review-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // gap: 30px;
+
+  &_right {
+    width: 525px;
+    text-align: left;
+
+    .item__right-review {
+      // width: 524px;
+
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 38px;
+
+      color: $gray;
+
+      margin-bottom: 55px;
+    }
+
+    .item__right-userName {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 38px;
+
+      color: $dark;
+
+      margin-bottom: 10px;
+    }
+
+    .item__right-userJob {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 28px;
+      letter-spacing: 0.08em;
+
+      color: $gray;
+    }
+  }
+
+  &_left {
+    width: 407px;
+    position: relative;
+
+    .item__left-background {
+      width: 285px;
+      height: 258px;
+      background: $orange;
+
+      border-radius: 40px 0px 400px 400px;
+      transform: rotate(-7.72deg);
+
+      position: absolute;
+
+      left: 6%;
+      bottom: 9%;
+      z-index: -1;
+    }
+
+    .item__left-img {
+      width: 326px;
+      margin-left: auto;
+
+      transform: translate(0px, 0px);
+      transition: .8s all;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &:hover .item__left-img{
+      transform: translate(30px, -30px);
+    }
+  }
+}
+
+// !STYLES FOR SLIDER
+
+.slick-list{
+  height: 470px;
+  overflow: hidden;
+}
+
+.slick-track{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slider{
+
+  .slick-dots{
+    position: absolute;
+    right: 0;
+    bottom: 22%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 12px;
+
+    li{
+      list-style: none;
+    }
+
+
+    button{
+      font-size: 0;
+      cursor: pointer;
+
+      width: 10px;
+      height: 16px;
+
+      background: #C4C4C4;
+
+      border-radius: 20px;
+
+      margin: 0 8px;
+
+      transition: .5s all;
+    }
+
+    .slick-active button{
+      transform: rotate(-90deg);
+
+      background: $orange;
+
+      width: 12px;
+      height: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px){
+  .users__review-item_left{
+    width: 40%;
+
+    .item__left-background{
+      width: 230px;
+      height: 200px;
+    }
+
+    .item__left-img{
+      width: 260px;
+
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+  .users__review-item_right{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 786px){
+  .users__review-item{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &_right{
+      width: 100%;
+    }
+
+    &_left{
+      margin-bottom: 30px;
+      width: 100%;
+
+      .item__left-background{
+        display: none;
+      }
+
+      .item__left-img{
+        margin: 0 auto;
+      }
+
+      &:hover .item__left-img{
+        transform: translate(0px, 0px);
+      }
+    }
+  }
+
+  .slick-list{
+    height: 100%;
+  }
+
+  .slider .slick-dots{
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .slider .slick-dots{
+    position: relative;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}

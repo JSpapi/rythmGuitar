@@ -1,0 +1,153 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.getApp__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .getApp__left {
+    width: 50%;
+
+    &-title {
+      font-family: $cal_sans;
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 67px;
+
+      color: $dark;
+
+      margin-bottom: 60px;
+
+      width: 484px;
+
+      span {
+        color: $orange;
+      }
+    }
+
+    &-images {
+      img:nth-child(1) {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  .getApp__right {
+    width: 50%;
+
+    &-content {
+      background: url("../../images/content/getApp-bg.png") no-repeat right /
+        contain;
+
+      display: flex;
+      align-items: center;
+
+      &:hover img {
+        &:nth-child(1) {
+          transform: translate(35px, 0px);
+        }
+
+        &:nth-child(2) {
+          transform: translate(-60px, 0px);
+        }
+      }
+
+      img {
+        transition: 1s all;
+        &:nth-child(1) {
+          transform: translate(35px, -25px);
+        }
+
+        &:nth-child(2) {
+          transform: translate(-60px, 30px);
+        }
+
+        width: 330px;
+        height: 616px;
+        filter: drop-shadow(0px 4px 80px rgba(0, 0, 0, 0.08));
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px){
+  .getApp__inner{
+    .getApp__right-content{
+      img{
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .getApp__inner {
+    flex-direction: column;
+    align-items: center;
+
+    .getApp__left {
+      width: 100%;
+      text-align: center;
+
+      &-title {
+        margin: 0 auto 30px auto;
+      }
+
+      margin-bottom: 20px;
+    }
+
+    .getApp__right {
+      width: 100%;
+
+      &-content {
+        width: 100%;
+        justify-content: center;
+        background-position: center;
+
+        img {
+          width: 250px;
+          height: 450px;
+
+          &:nth-child(1) {
+            transform: translate(0px, -25px);
+          }
+
+          &:nth-child(2) {
+            transform: translate(0px, 30px);
+          }
+        }
+
+        &:hover img {
+          &:nth-child(1) {
+            transform: translate(0px, -25px);
+          }
+
+          &:nth-child(2) {
+            transform: translate(0px, 30px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .getApp__inner {
+    .getApp__left-title {
+      font-size: 33px;
+      line-height: 43px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .getApp__inner {
+    .getApp__right-content {
+      img {
+        width: 50%;
+        height: 300px;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.regulra-text{
+	@include regularText($gray)
+}
+
+.title{
+	margin-bottom: 80px;
+	@include title($dark);
+
+		span{
+			color: $orange;
+		}
+}
+
+@media screen and (max-width: 992px){
+	.title{
+		@include title($dark);
+		font-size: 35px;
+		line-height: 43px;
+		margin-bottom: 30px;
+		
+	}
+}
+
+.text-center{
+	text-align: center;
+}

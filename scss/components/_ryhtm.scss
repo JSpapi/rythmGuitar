@@ -1,0 +1,101 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.rythm__info {
+  background: $dark;
+  width: 100%;
+  padding: 60px 0;
+
+  &-title {
+    @include title($white);
+    margin-bottom: 80px;
+
+    span {
+      color: $orange;
+    }
+  }
+
+  &-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &-item{
+    width: 230px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: default;
+
+    &:hover .rythm__info-item_img{
+      background: none;
+    }
+  }
+
+  &-item_img{
+    width: 72px;
+    height: 72px;
+
+    border-radius: 20px;
+    background: #262626;
+
+    padding: 20px;
+    margin-bottom: 40px;
+
+    transition: $transition;
+  }
+}
+
+.rythm__info-item_content{
+  .item__content-title{
+    @include subtitle($white);
+
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+
+  .item__content-text{
+    @include subregularText($gray);
+  }
+}
+
+@media screen and (max-width: 992px){
+  .rythm__info-title{
+    font-size: 35px;
+    line-height: 43px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .rythm__info-title{
+    font-size: 35px;
+    line-height: 43px;
+    margin-bottom: 30px;
+  }
+
+  .rythm__info-item:hover .rythm__info-item_img{
+      background: #262626;
+  }
+}
+
+
+@media screen and (max-width: 768px){
+  .rythm__info-items{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rythm__info-item{
+    margin-bottom: 30px;
+
+    &:hover .rythm__info-item_img{
+      background: #262626;
+    }
+  }
+}
